@@ -71,7 +71,7 @@ async function SinglePage({ params }: { params: { slug: string } }) {
         ))}
         {product.additionalInfoSections?.length === undefined && <div className="h-[2px] bg-main" />}
         {/* REVIEWS */}
-        <h1 className="text-2xl">User Reviews</h1>
+        {/* <h1 className="text-2xl">Reseñas de usuarios</h1> */}
         {/* <Reviews productId={product._id!} /> */}
       </div>
     </div>

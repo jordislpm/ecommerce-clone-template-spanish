@@ -55,7 +55,7 @@ export function useAuth() {
             email,
             window.location.href
           );
-          setMessage("Password reset email sent. Please check your e-mail.");
+         setMessage("Password reset email sent. Please check your e-mail.");
           break;
         case MODE.EMAIL_VERIFICATION:
           response = await wixClient.auth.processVerification({
@@ -72,7 +72,7 @@ export function useAuth() {
 
       switch (response.loginState) {
         case LoginState.SUCCESS:
-          setMessage("Successful! You are being redirected.");
+          setMessage("¡Éxito! Estás siendo redirigido.");
           const tokens = await wixClient.auth.getMemberTokensForDirectLogin(
             response.data.sessionToken!
           );
@@ -82,7 +82,7 @@ export function useAuth() {
           });
           wixClient.auth.setTokens(tokens);
           setIsLoggedIn(true);
-          getCart()
+          getCart();
           router.push("/");
           break;
 
@@ -91,13 +91,13 @@ export function useAuth() {
             response.errorCode === "invalidEmail" ||
             response.errorCode === "invalidPassword"
           ) {
-            setError("Invalid email or password!");
+            setError("Correo electrónico o contraseña incorrectos.");
           } else if (response.errorCode === "emailAlreadyExists") {
-            setError("Email already exists!");
+            setError("El correo electrónico ya está registrado.");
           } else if (response.errorCode === "resetPassword") {
-            setError("You need to reset your password!");
+            setError("Debes restablecer tu contraseña.");
           } else {
-            setError("Something went wrong!");
+            setError("Algo salió mal. Inténtalo de nuevo.");
           }
           break;
 
@@ -106,7 +106,7 @@ export function useAuth() {
           break;
 
         case LoginState.OWNER_APPROVAL_REQUIRED:
-          setMessage("Your account is pending approval");
+          setMessage("Tu cuenta está pendiente de aprobación.");
           break;
       }
     } catch (err) {
@@ -134,19 +134,19 @@ export function useAuth() {
     handleSubmit,
     formTitle:
       mode === MODE.LOGIN
-        ? "Log in"
+        ? "Iniciar sesión"
         : mode === MODE.REGISTER
-        ? "Register"
+        ? "Registrarse"
         : mode === MODE.RESET_PASSWORD
-        ? "Reset Your Password"
-        : "Verify Your Email",
+        ? "Restablecer tu contraseña"
+        : "Verificar tu correo electrónico",
     buttonTitle:
       mode === MODE.LOGIN
-        ? "Login"
+        ? "Acceder"
         : mode === MODE.REGISTER
-        ? "Register"
+        ? "Registrarse"
         : mode === MODE.RESET_PASSWORD
-        ? "Reset"
-        : "Verify",
+        ? "Restablecer"
+        : "Verificar",
   };
 }

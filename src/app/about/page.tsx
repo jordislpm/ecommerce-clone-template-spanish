@@ -14,12 +14,12 @@ function About() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4 text-main">Our Mission</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-main">Nuestra mision</h2>
         <p>{about.mission}</p>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4 text-main">Why Choose Us?</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-main">¿Por qué elegirnos?</h2>
         <ul className="list-disc list-inside space-y-2 text-gray-700">
           {about.whyChooseUs.map((reason, i) => (
             <li key={i}>{reason}</li>
@@ -28,16 +28,16 @@ function About() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4 text-main">Contact & Visit Us</h2>
+        <h2 className="text-2xl font-semibold mb-4 text-main">Contáctenos y visítenos</h2>
         <address className="not-italic mb-4 text-gray-700">
           {myStoreInfo.address}
           <br />
-          Email:{" "}
+          Correo:{" "}
           <a href={`mailto:${myStoreInfo.email}`} className="text-secundary underline">
             {myStoreInfo.email}
           </a>
           <br />
-          Phone:{" "}
+          Telefono:{" "}
           <a href={`tel:${myStoreInfo.phone}`} className="text-secundary underline">
             {myStoreInfo.phone}
           </a>

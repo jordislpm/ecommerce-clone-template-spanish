@@ -24,7 +24,7 @@ async function ListPage({ searchParams }: { searchParams: any }) {
       {/* FILTER */}
       <Filter />
       {/* PRODUCTS */}
-      <h1 className="mt-12 text-xl font-semibold">{collection?.collection?.name} For You!</h1>
+      <h1 className="mt-12 text-xl font-semibold">{collection?.collection?.name}!</h1>
       <Suspense fallback={<Skeleton />}>
         <ProductList
           categoryId={

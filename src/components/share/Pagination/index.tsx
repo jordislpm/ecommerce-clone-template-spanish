@@ -30,14 +30,14 @@ const pathname = usePathname();
         disabled={!hasPrev}
         onClick={() => createPageUrl(currentPage - 1)}
       >
-        Previous
+        Anterior
       </button>
       <button
         className="rounded-md bg-main text-white p-2 text-sm w-24 cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
         disabled={!hasNext}
         onClick={() => createPageUrl(currentPage + 1)}
       >
-        Next
+        Siguiente
       </button>
     </div>
   );

@@ -77,7 +77,7 @@ const ContactForm: React.FC<ContactProps> = ({ formTitle }) => {
           type="submit"
           className="bg-main text-white px-6 py-2 rounded-2xl hover:bg-main/90"
         >
-          Send
+          Enviar
         </button>
       </form>
     </div>

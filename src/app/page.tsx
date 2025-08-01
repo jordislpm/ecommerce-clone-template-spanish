@@ -14,7 +14,7 @@ async function HomePage() {
     <div className=''>
       <Slider />
       <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 mb-8">
-        <h1 className="text-2xl">New Arrivals</h1>
+        <h1 className="text-2xl">Lo último en la tienda</h1>
         <Suspense fallback={<Skeleton />}>
           <ProductList
             categoryId="00000000-000000-000000-000000000001"
@@ -27,15 +27,14 @@ async function HomePage() {
       </div>
       <div className="mt-24">
         <h1 className="text-2xl px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64 mb-12">
-          Categories
+          Colecciones
         </h1>
         <Suspense fallback={<Skeleton />}>
-          <CollectionList
-          />
+          <CollectionList />
         </Suspense>
       </div>
       <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
-        <h1 className="text-2xl">Matching Sets</h1>
+        <h1 className="text-2xl">Conjuntos a Juego</h1>
         <Suspense fallback={<Skeleton />}>
           <ProductList categoryId="e341fe86-cfaa-42f3-8f3c-9e883c7cca20" />
         </Suspense>

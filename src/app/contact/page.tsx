@@ -16,19 +16,19 @@ function Contact() {
 
       <div className="space-y-6 mb-12">
         <div>
-          <h2 className="font-semibold text-lg text-main">Email</h2>
+          <h2 className="font-semibold text-lg text-main">Correo</h2>
           <p className="text-gray-700">{email}</p>
         </div>
         <div>
-          <h2 className="font-semibold text-lg text-main">Phone</h2>
+          <h2 className="font-semibold text-lg text-main">Telefono</h2>
           <p className="text-gray-700">{phone}</p>
         </div>
         <div>
-          <h2 className="font-semibold text-lg text-main">Address</h2>
+          <h2 className="font-semibold text-lg text-main">Direccion</h2>
           <p className="text-gray-700">{address}</p>
         </div>
         <div>
-          <h2 className="font-semibold text-lg text-main">Social Media</h2>
+          <h2 className="font-semibold text-lg text-main">Redes Sociales</h2>
           <div className="flex gap-4 mt-2">
             {socialIcons.map(({ name, icon }) => {
               const url = socialMedia[name];
@@ -47,7 +47,7 @@ function Contact() {
         </div>
       </div>
 
-      <ContactForm formTitle="Contact Us" />
+      <ContactForm formTitle="Contactanos" />
     </div>
   );
 }

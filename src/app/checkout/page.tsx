@@ -4,6 +4,7 @@ import useCartStore from "../../hooks/client/cart/useCartStore";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { formatPrice } from "../../lib/format/formatPrice";
 
 export default function CheckoutPage() {
   const { counter, cart, isLoading, removeItem, clearCart } = useCartStore();
@@ -14,7 +15,7 @@ export default function CheckoutPage() {
 
   const handleWhatsAppOrder = () => {
  if (!name.trim() || !address.trim() || !phone.trim()) {
-    alert("Please fill out all fields before sending the order.");
+    alert("Por favor, completa todos los campos antes de enviar el pedido.");
     return;
   }
 
@@ -52,7 +53,7 @@ export default function CheckoutPage() {
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
   const confirmed = window.confirm(
-    "You’re about to open WhatsApp to send your order.\n\nOnce you continue, your cart will be cleared.\n\nDo you want to proceed?"
+    "Estás a punto de abrir WhatsApp para enviar tu pedido., Al continuar, tu carrito será vaciado.\n\n¿Quieres continuar?"
   );
 
   if (confirmed) {
@@ -107,17 +108,16 @@ export default function CheckoutPage() {
                 )}
               </div>
               <span>
-                $
                 {item.quantity <= 1
-                  ? item.price
-                  : Math.abs((item.price ? parseInt(item.price) : 0) * item.quantity)}
+                  ? formatPrice(item.price) 
+                  : formatPrice(Math.abs((item.price ? parseInt(item.price) : 0) * item.quantity))}
               </span>
             </div>
           ))}
           <hr className="my-2" />
           <div className="flex justify-between font-bold text-lg">
             <span>Total</span>
-            <span>${cart?.subtotal.amount}</span>
+            <span>{formatPrice(cart?.subtotal.amount)}</span>
           </div>
         </div>
       </section>

@@ -10,20 +10,20 @@ function Filter() {
 
 
   const { collections } = useCollectionsStore();
-   const handleFilterChange = (
+  const handleFilterChange = (
     e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>
   ) => {
     const { name, value } = e.target;
-     const params = new URLSearchParams(searchParams);
+    const params = new URLSearchParams(searchParams);
     params.set(name, value);
     replace(`${pathname}?${params.toString()}`);
 
-   
+
   };
 
-   useEffect(()=>{
+  useEffect(() => {
     console.log(searchParams)
-   },[searchParams])
+  }, [searchParams])
 
   return (
     <div className="mt-12 flex justify-between flex-col md:flex-row gap-6 md:gap-0">
@@ -53,14 +53,14 @@ function Filter() {
         <input
           type="text"
           name="min"
-          placeholder="min price"
+          placeholder="Precio minimo"
           className="text-xs rounded-2xl pl-2 w-24 ring-1 ring-main"
           onChange={handleFilterChange}
         />
         <input
           type="text"
           name="max"
-          placeholder="max price"
+          placeholder="Precio maximo"
           className="text-xs rounded-2xl pl-2 w-24 ring-1 ring-main"
           onChange={handleFilterChange}
         />
@@ -69,8 +69,8 @@ function Filter() {
           className="py-2 px-4 rounded-2xl text-xs font-medium  bg-main"
           onChange={handleFilterChange}
         >
-          <option value="">All Products</option>
-          <option value="true">Only Discounts</option>
+          <option value="">Todos los productos</option>
+          <option value="true">Solo descuentos</option>
         </select>
         {/* <select
           name="type"
@@ -102,7 +102,7 @@ function Filter() {
           id=""
           className="py-2 px-4 rounded-2xl text-xs font-medium  bg-main"
         >
-          <option>All Filters</option>
+          <option>Todos los filtros</option>
         </select>
       </div>
       <div className="">
@@ -112,11 +112,11 @@ function Filter() {
           className="py-2 px-4 rounded-2xl text-xs font-medium bg-white ring-1 ring-main"
           onChange={handleFilterChange}
         >
-          <option>Sort By</option>
-          <option value="asc price">Price (low to high)</option>
-          <option value="desc price">Price (high to low)</option>
-          <option value="asc lastUpdated">Newest</option>
-          <option value="desc lastUpdated">Oldest</option>
+          <option>Ordenar por</option>
+          <option value="asc price">Precio (menor a mayor)</option>
+          <option value="desc price">Precio (mayor a menor)</option>
+          <option value="asc lastUpdated">Más nuevo</option>
+          <option value="desc lastUpdated">Más antiguo</option>
         </select>
       </div>
     </div>

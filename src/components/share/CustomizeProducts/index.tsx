@@ -109,7 +109,7 @@ function CustomizeProducts({ productId, variants, productOptions }: CustomizePro
         <div className="flex flex-col gap-6">
             {productOptions.map((option) => (
                 <div className="flex flex-col gap-4" key={option.name}>
-                    <h4 className="font-medium">Choose a {option.name}</h4>
+                    <h4 className="font-medium">Elige un {option.name}</h4>
                     <ul className="flex items-center gap-3">
                         {option.choices?.map((choice) => {
                             const disabled = !isVariantInStock({

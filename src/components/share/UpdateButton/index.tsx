@@ -9,7 +9,7 @@ const UpdateButton = () => {
       disabled={pending}
       className="bg-main text-white p-2 rounded-md cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed max-w-96"
     >
-      {pending ? "Updating..." : "Update"}
+      {pending ? "Actualizando..." : "Actualizar"}
     </button>
   );
 };

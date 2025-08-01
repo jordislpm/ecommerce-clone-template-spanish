@@ -29,7 +29,7 @@ async function ProductList({ categoryId, limit, searchParams }: ProductListProps
       {products.length <= 0 &&
         <div className='flex justify-center items-center w-full'>
           <p className="text-secundary text-center mt-4">
-            No products found in this collection.
+            No se encontraron productos en esta colección
           </p>
         </div>
       }

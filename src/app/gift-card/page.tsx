@@ -3,7 +3,7 @@ import ComingSoon from '../../components/share/ComingSoon'
 
 function GiftCard() {
   return (
-    <div><ComingSoon serviceName="Gift Card" /></div>
+    <div><ComingSoon serviceName="Tarjeta de regalo" /></div>
   )
 }
 
