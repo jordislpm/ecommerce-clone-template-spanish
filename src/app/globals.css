@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .hover-underline-main {
+    @apply border-b-2 border-transparent hover:border-main transition-all duration-200;
+  }
+
+  .hover-underline-secundary {
+    @apply border-b-2 border-transparent hover:border-secundary transition-all duration-200;
+  }
+
+  .hover-scale-link {
+    @apply hover:scale-105 transform transition-transform duration-200;
+  }
+
+  .shadow-modal {
+    @apply shadow-[0_3px_10px_rgb(0,0,0,0.2)];
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+}
