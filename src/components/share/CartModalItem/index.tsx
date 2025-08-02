@@ -22,27 +22,31 @@ function CartModalItem({ item }: CartModalItemProps) {
                 height={96}
                 className='object-cover rounded-md'
             />
-            <div className=' flex flex-col justify-between w-full gap-2'>
-                {/* TOP */}
+            <div className='flex flex-col justify-between w-full gap-2'>
+                {/* PARTE SUPERIOR */}
                 <div className='gap-1'>
-                    {/* TITTLE*/}
+                    {/* TÍTULO */}
                     <div className='flex items-center justify-between gap-8'>
                         <h3 className='font-semibold'>{item.name}</h3>
                         <div className='p-1 bg-secundary_second rounded-sm'>${item.price}</div>
                     </div>
-                    {/* DESC */}
+                    {/* DESCRIPCIÓN */}
                     <div className='text-sm flex text-gray-500 h-full w-full justify-between'>
                         {item.availability?.status.toLocaleLowerCase()}
                         {item.descriptionLines.length > 0 &&
                             <span>{item.descriptionLines[0]?.colorInfo?.original}/{item.descriptionLines[1]?.colorInfo?.original}</span>
-
                         }
                     </div>
                 </div>
-                {/* BOTTOM */}
+                {/* PARTE INFERIOR */}
                 <div className='flex justify-between text-sm'>
-                    <span className='text-gray-500'>Qty. {item.quantity}</span>
-                    <span onClick={() => removeItem(item.id)} className='text-main_second cursor-pointer hover:text-secundary'>Remove</span>
+                    <span className='text-gray-500'>Cantidad: {item.quantity}</span>
+                    <span
+                        onClick={() => removeItem(item.id)}
+                        className='text-main_second cursor-pointer hover:text-secundary'
+                    >
+                        Eliminar
+                    </span>
                 </div>
             </div>
         </div>

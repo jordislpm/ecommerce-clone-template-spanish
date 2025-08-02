@@ -32,25 +32,25 @@ function Menu() {
     const [open, setOpen] = useState<boolean>(false)
     return (
         <div>
-            <IoMenu className='cursor-pointer text-main hover:text-secundary w-10 h-10'
-                onClick={() => setOpen(!open)} />
-            {/* <Image src="/hamburger-menu.svg" width={28} height={28} alt='menu-button' className='cursor-pointer text-orange-500 hover:text-blue-500'
-                onClick={() => setOpen(!open)} /> */}
+            <IoMenu
+                className="cursor-pointer text-main hover:text-secundary w-10 h-10"
+                onClick={() => setOpen(!open)}
+            />
+            {/* <Image src="/hamburger-menu.svg" width={28} height={28} alt='botón menú' className='cursor-pointer text-orange-500 hover:text-blue-500'
+      onClick={() => setOpen(!open)} /> */}
             {open && (
-                <div className='absolute bg-main text-secundary left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-20'>
-                    <Link href="/" onClick={() => setOpen(false)}>Home</Link>
-                    <Link href="/list" onClick={() => setOpen(false)}>Shop</Link>
-                    <Link href="/list?discount=true" onClick={() => setOpen(false)}>Deals</Link>
-                    <Link href="/about" onClick={() => setOpen(false)}>About</Link>
-                    <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
-                    {
-                        isLoggedIn ?
-                            <div onClick={handleLogout}>Logout</div>
-                            :
-                            <Link href="/login" onClick={() => setOpen(false)}>Login</Link>
-                    }
-
-                    <Link href="/cart" onClick={() => setOpen(false)}>Cart ({counter})</Link>
+                <div className="absolute bg-main text-secundary left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-20">
+                    <Link href="/" onClick={() => setOpen(false)}>Inicio</Link>
+                    <Link href="/list" onClick={() => setOpen(false)}>Tienda</Link>
+                    <Link href="/list?discount=true" onClick={() => setOpen(false)}>Ofertas</Link>
+                    <Link href="/about" onClick={() => setOpen(false)}>Nosotros</Link>
+                    <Link href="/contact" onClick={() => setOpen(false)}>Contacto</Link>
+                    {isLoggedIn ? (
+                        <div onClick={handleLogout} className="cursor-pointer">Cerrar sesión</div>
+                    ) : (
+                        <Link href="/login" onClick={() => setOpen(false)}>Iniciar sesión</Link>
+                    )}
+                    <Link href="/cart" onClick={() => setOpen(false)}>Carrito ({counter})</Link>
                 </div>
             )}
         </div>

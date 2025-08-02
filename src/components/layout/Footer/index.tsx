@@ -17,9 +17,7 @@ function Footer() {
               <Image className='w-180 lg:w-250 xl:w-450 h-auto' src="/oliStore.png" alt='logo' width={180} height={50} />
             </div>
           </Link>
-          <p>
-            {myStoreInfo.address}
-          </p>
+          <p>{myStoreInfo.address}</p>
           <span className="font-semibold">{myStoreInfo.email}</span>
           <span className="font-semibold">{myStoreInfo.phone}</span>
           <div className="flex gap-6">
@@ -36,72 +34,71 @@ function Footer() {
         {/* CENTER */}
         <div className="hidden lg:flex justify-between w-1/2">
           <div className="flex flex-col justify-between">
-            <h1 className="font-medium text-lg">COMPANY</h1>
+            <h1 className="font-medium text-lg">EMPRESA</h1>
             <div className="flex flex-col gap-6">
-              <Link className='hover-underline-secundary' href="/about">About Us</Link>
-              <Link className='hover-underline-secundary' href="/list?discount=true">Deals</Link>
-              <Link className='hover-underline-secundary' href="/affiliates">Affiliates</Link>
+              <Link className='hover-underline-secundary' href="/about">Sobre Nosotros</Link>
+              <Link className='hover-underline-secundary' href="/list?discount=true">Ofertas</Link>
+              <Link className='hover-underline-secundary' href="/affiliates">Afiliados</Link>
               <Link className='hover-underline-secundary' href="/blog">Blog</Link>
-              <Link className='hover-underline-secundary' href="/contact">Contact Us</Link>
+              <Link className='hover-underline-secundary' href="/contact">Contáctanos</Link>
             </div>
           </div>
           <div className="flex flex-col justify-between">
-            <h1 className="font-medium text-lg">SHOP</h1>
+            <h1 className="font-medium text-lg">TIENDA</h1>
             <div className="flex flex-col gap-6">
-              <Link className='hover-underline-secundary' href="/list?cat=all-products&sort=asc+lastUpdated">New Arrivals</Link>
-              <Link className='hover-underline-secundary' href="/list?cat=accessories">Accessories</Link>
-              <Link className='hover-underline-secundary' href="/list?cat=pants-jeans">Pants</Link>
-              <Link className='hover-underline-secundary' href="/list?cat=t-shirts">T-shirts</Link>
-              <Link className='hover-underline-secundary' href="/list?cat=all-products">All Products</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=all-products&sort=asc+lastUpdated">Últimas novedades</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=accessories">Accesorios</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=pants-jeans">Pantalones</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=t-shirts">Camisetas</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=all-products">Todos los productos</Link>
             </div>
           </div>
           <div className="flex flex-col justify-between">
-            <h1 className="font-medium text-lg">HELP</h1>
+            <h1 className="font-medium text-lg">AYUDA</h1>
             <div className="flex flex-col gap-6">
-              <Link className='hover-underline-secundary' href="/customer-service">Customer Service</Link>
-              <Link className='hover-underline-secundary' href="/profile">My Account</Link>
-              <Link className='hover-underline-secundary' href="/find-store">Find a Store</Link>
-              <Link className='hover-underline-secundary' href="/legal">Legal & Privacy</Link>
-              <Link className='hover-underline-secundary' href="/gift-card">Gift Card</Link>
+              <Link className='hover-underline-secundary' href="/customer-service">Servicio al Cliente</Link>
+              <Link className='hover-underline-secundary' href="/profile">Mi Cuenta</Link>
+              <Link className='hover-underline-secundary' href="/find-store">Buscar Tienda</Link>
+              <Link className='hover-underline-secundary' href="/legal">Legal y Privacidad</Link>
+              <Link className='hover-underline-secundary' href="/gift-card">Tarjeta de Regalo</Link>
             </div>
           </div>
         </div>
         {/* RIGHT */}
         <div className="w-full md:w-1/2 lg:w-1/4 flex flex-col gap-8">
-          <h1 className="font-medium text-lg">SUBSCRIBE</h1>
+          <h1 className="font-medium text-lg">SUSCRÍBETE</h1>
           <p>
-            Be the first to get the latest news about trends, promotions, and
-            much more!
+            Sé el primero en recibir las últimas noticias sobre tendencias, promociones y mucho más.
           </p>
           <div className="flex">
             <input
               type="text"
-              placeholder="Email address"
+              placeholder="Correo electrónico"
               className="p-4 w-3/4"
             />
-            <button className="w-1/4 bg-lama text-white">JOIN</button>
+            <button className="w-1/4 bg-lama text-white">UNIRSE</button>
           </div>
-          <span className="font-semibold">Secure Payments</span>
+          <span className="font-semibold">Pagos Seguros</span>
           <div className="flex justify-between">
-            <Image src="/discover.png" alt="" width={40} height={20} />
-            <Image src="/skrill.png" alt="" width={40} height={20} />
-            <Image src="/paypal.png" alt="" width={40} height={20} />
-            <Image src="/mastercard.png" alt="" width={40} height={20} />
-            <Image src="/visa.png" alt="" width={40} height={20} />
+            <Image src="/discover.png" alt="Discover" width={40} height={20} />
+            <Image src="/skrill.png" alt="Skrill" width={40} height={20} />
+            <Image src="/paypal.png" alt="Paypal" width={40} height={20} />
+            <Image src="/mastercard.png" alt="Mastercard" width={40} height={20} />
+            <Image src="/visa.png" alt="Visa" width={40} height={20} />
           </div>
         </div>
       </div>
       {/* BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
-        <a href='https://www.jordisdev.com' target="_blank" className="cursor:pointer">© 2025 jordisdev.com</a>
+        <a href='https://www.jordisdev.com' target="_blank" className="cursor-pointer">© 2025 jordisdev.com</a>
         <div className="flex flex-col gap-8 md:flex-row">
-          <div className="">
-            <span className="text-gray-500 mr-4">Language</span>
-            <span className="font-medium">United States | English</span>
+          <div>
+            <span className="text-gray-500 mr-4">Idioma</span>
+            <span className="font-medium">Estados Unidos | Español</span>
           </div>
-          <div className="">
-            <span className="text-gray-500 mr-4">Currency</span>
-            <span className="font-medium">$ USD</span>
+          <div>
+            <span className="text-gray-500 mr-4">Moneda</span>
+            <span className="font-medium">$ RD</span>
           </div>
         </div>
       </div>

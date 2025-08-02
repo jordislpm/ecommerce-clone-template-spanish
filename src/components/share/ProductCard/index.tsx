@@ -20,15 +20,15 @@ function ProductCard({ product }: ProductCardProps) {
             <div className="relative w-full h-80">
                 <Image
                     src={product.media?.mainMedia?.image?.url || "/product.png"}
-                    alt=""
+                    alt={product.name || "producto"}
                     fill
                     sizes="25vw"
-                    className="absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity easy duration-500"
+                    className="absolute object-cover rounded-md z-10 hover:opacity-0 transition-opacity ease duration-500"
                 />
                 {product.media?.items && (
                     <Image
                         src={product.media?.items[1]?.image?.url || "/product.png"}
-                        alt=""
+                        alt={product.name || "producto"}
                         fill
                         sizes="25vw"
                         className="absolute object-cover rounded-md"
@@ -37,7 +37,7 @@ function ProductCard({ product }: ProductCardProps) {
             </div>
             <div className="flex justify-between">
                 <span className="font-medium">{product.name}</span>
-                <span className="font-semibold ">${product.price?.price}</span>
+                <span className="font-semibold">${product.price?.price}</span>
             </div>
             {product.additionalInfoSections && (
                 <div
@@ -51,7 +51,7 @@ function ProductCard({ product }: ProductCardProps) {
                     }}
                 ></div>
             )}
-            <ButtonRound text='Add to Cart' buttonAction={() => { }} />
+            <ButtonRound text="Agregar al carrito" buttonAction={() => { }} />
         </Link>
     )
 }

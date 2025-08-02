@@ -11,7 +11,7 @@ return (
         {serviceName ? `${serviceName} no está disponible` : "Servicio no disponible"}
       </h1>
       <p className="text-lg">
-       This service isn&#39;t available right now, keep enjoying the rest of our store.
+       Este servicio no está disponible en este momento, pero sigue disfrutando de todo lo que nuestra tienda ofrece.
       </p>
     </main>
   );
