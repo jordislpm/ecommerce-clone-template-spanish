@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { CartItem } from '../../../types'
 import useCartStore from '../../../hooks/client/cart/useCartStore';
+import { formatPrice } from '../../../lib/format/formatPrice';
 
 
 interface CartModalItemProps {
@@ -28,7 +29,7 @@ function CartModalItem({ item }: CartModalItemProps) {
                     {/* TÍTULO */}
                     <div className='flex items-center justify-between gap-8'>
                         <h3 className='font-semibold'>{item.name}</h3>
-                        <div className='p-1 bg-secundary_second rounded-sm'>${item.price}</div>
+                        <div className='p-1 bg-secundary_second rounded-sm'>{formatPrice(item.price)}</div>
                     </div>
                     {/* DESCRIPCIÓN */}
                     <div className='text-sm flex text-gray-500 h-full w-full justify-between'>

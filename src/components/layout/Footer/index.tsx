@@ -7,7 +7,7 @@ import { socialIcons } from '../../../contants/socialMedia';
 
 function Footer() {
   return (
-    <footer className="py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-main text-sm mt-24">
+    <footer className="flex flex-col h-full py-24 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-main text-sm mt-24 justify-between">
       {/* TOP */}
       <div className="flex flex-col md:flex-row justify-between gap-24">
         {/* LEFT */}
@@ -90,7 +90,6 @@ function Footer() {
       </div>
       {/* BOTTOM */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mt-16">
-        <a href='https://www.jordisdev.com' target="_blank" className="cursor-pointer">© 2025 jordisdev.com</a>
         <div className="flex flex-col gap-8 md:flex-row">
           <div>
             <span className="text-gray-500 mr-4">Idioma</span>
@@ -102,6 +101,7 @@ function Footer() {
           </div>
         </div>
       </div>
+       <a href='https://www.jordisdev.com' target="_blank" className="cursor-pointer">© 2025 jordisdev.com</a>
     </footer>
   )
 }

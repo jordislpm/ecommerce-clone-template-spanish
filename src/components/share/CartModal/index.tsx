@@ -71,7 +71,7 @@ function CartModal() {
             </p>
             <div className='flex justify-between'>
               <ButtonRect text='Ver Carrito' buttonAction={handleViewCart} />
-              <ButtonRect text='Finalizar Compra' type='black' buttonAction={actionHandleCheckout} />
+              <ButtonRect text='Completar Compra' type='black' buttonAction={actionHandleCheckout} />
             </div>
           </div>
         </div>

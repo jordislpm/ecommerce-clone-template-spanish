@@ -5,6 +5,7 @@ import React from 'react'
 import DOMPurify from "isomorphic-dompurify";
 import { ProductItem } from '../../../types';
 import ButtonRound from '../ButtonRound';
+import { formatPrice } from '../../../lib/format/formatPrice';
 
 interface ProductCardProps {
     product: ProductItem
@@ -37,7 +38,7 @@ function ProductCard({ product }: ProductCardProps) {
             </div>
             <div className="flex justify-between">
                 <span className="font-medium">{product.name}</span>
-                <span className="font-semibold">${product.price?.price}</span>
+                <span className="font-semibold">{formatPrice(product.price?.price) }</span>
             </div>
             {product.additionalInfoSections && (
                 <div

@@ -74,7 +74,7 @@ function Slider() {
                             </h1>
                             <Link href={slide.url}>
                                 <ButtonRect
-                                    text="SHOP NOW"
+                                    text="VER MAS"
                                     buttonAction={() => { }}
                                     type="black"
                                 />
