@@ -52,7 +52,7 @@ function ProductCard({ product }: ProductCardProps) {
                     }}
                 ></div>
             )}
-            <ButtonRound text="Agregar al carrito" buttonAction={() => { }} />
+            <ButtonRound text="Ver producto" buttonAction={() => { }} />
         </Link>
     )
 }

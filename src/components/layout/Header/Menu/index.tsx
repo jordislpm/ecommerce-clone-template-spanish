@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoMenu } from "react-icons/io5";
 import useCartStore from '../../../../hooks/client/cart/useCartStore';
 import { useIsLoggedIn } from '../../../../hooks/client/auth/useIsLoggedIn';
@@ -30,6 +30,20 @@ function Menu() {
     };
 
     const [open, setOpen] = useState<boolean>(false)
+
+
+    useEffect(() => {
+    if (open) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+
+    // Limpieza en caso de desmontaje
+    return () => {
+        document.body.style.overflow = '';
+    };
+}, [open]);
     return (
         <div>
             <IoMenu
@@ -45,12 +59,16 @@ function Menu() {
                     <Link href="/list?discount=true" onClick={() => setOpen(false)}>Ofertas</Link>
                     <Link href="/about" onClick={() => setOpen(false)}>Nosotros</Link>
                     <Link href="/contact" onClick={() => setOpen(false)}>Contacto</Link>
-                    {isLoggedIn ? (
+
+                    {!isLoggedIn &&  <Link href="/login" onClick={() => setOpen(false)}>Iniciar sesión</Link>}
+                    {/* {isLoggedIn ? (
                         <div onClick={handleLogout} className="cursor-pointer">Cerrar sesión</div>
                     ) : (
                         <Link href="/login" onClick={() => setOpen(false)}>Iniciar sesión</Link>
-                    )}
+                    )} */}
                     <Link href="/cart" onClick={() => setOpen(false)}>Carrito ({counter})</Link>
+                     {isLoggedIn &&  <Link href="/profile" onClick={() => setOpen(false)} className="cursor-pointer">Mi perfil</Link>}
+                     {isLoggedIn &&  <div onClick={handleLogout} className="cursor-pointer">Cerrar sesión</div>}
                 </div>
             )}
         </div>
