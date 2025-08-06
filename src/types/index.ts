@@ -99,7 +99,6 @@ export type MyStoreInfoType = {
   plan: "simple-whatsapp" | "premium-wix";
   title: string;
   description: string;
-
   about: {
     mission: string;
     whyChooseUs: string[];
@@ -113,6 +112,7 @@ export type MyStoreInfoType = {
   address: string;
   email: string;
   phone: string;
+  phoneWhatsapp: string;
   mapEmbedUrl?: string;
 
   socialMedia: {

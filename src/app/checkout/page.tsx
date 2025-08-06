@@ -5,25 +5,30 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { formatPrice } from "../../lib/format/formatPrice";
+import { myStoreInfo } from "../../contants/general";
 
 export default function CheckoutPage() {
   const { counter, cart, isLoading, removeItem, clearCart } = useCartStore();
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const router = useRouter();
 
   const handleWhatsAppOrder = () => {
- if (!name.trim() || !address.trim() || !phone.trim()) {
+ if (!name.trim() || !address.trim() || !phoneNumber.trim()) {
     alert("Por favor, completa todos los campos antes de enviar el pedido.");
     return;
   }
 
-  const phoneNumber = "14168774127";
+  const {phoneWhatsapp}=myStoreInfo;
+
+  //+1 829 268 2437
+
+  // const phoneWhatsapp = "+14168774127";
 
   let message = `Nuevo pedido:\n\n`;
   message += `Nombre: ${name}\n`;
-  message += `Teléfono: ${phone}\n`;
+  message += `Teléfono: ${phoneNumber}\n`;
   message += `Dirección: ${address}\n\n`;
   message += `Artículos solicitados:\n\n`;
 
@@ -50,7 +55,7 @@ export default function CheckoutPage() {
   message += `Total: C$${cart?.subtotal.amount}`;
 
   const encodedMessage = encodeURIComponent(message);
-  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+  const whatsappURL = `https://wa.me/${phoneWhatsapp}?text=${encodedMessage}`;
 
   const confirmed = window.confirm(
     "Estás a punto de abrir WhatsApp para enviar tu pedido., Al continuar, tu carrito será vaciado.\n\n¿Quieres continuar?"
@@ -141,8 +146,8 @@ export default function CheckoutPage() {
         <input
           type="text"
           placeholder="Tu número de teléfono"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
           className="w-full border p-3 rounded-md"
         />
       </section>

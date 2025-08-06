@@ -5,7 +5,7 @@ const baseInfo = {
   title: "Oli Store",
   email: "info@olistore.com",
   phone: "+1 829 268 2437",
-
+  phoneWhatsapp: "18292682437"
 };
 
 export const myStoreInfo: MyStoreInfoType = {
