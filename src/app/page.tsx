@@ -36,7 +36,7 @@ async function HomePage() {
       <div className="mt-24 px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
         <h1 className="text-2xl">Conjuntos a Juego</h1>
         <Suspense fallback={<Skeleton />}>
-          <ProductList categoryId="e341fe86-cfaa-42f3-8f3c-9e883c7cca20" />
+          <ProductList categoryId="d8146dfd-440d-418d-0864-daf7b51c46d3" />
         </Suspense>
       </div>
     </div>
