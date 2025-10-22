@@ -142,7 +142,7 @@ export const slidesData: SlideType[] = [
     id: 1,
     title: "Diversión de verano para niños",
     description: "¡Ropa fresca con hasta 50% de descuento! ☀️👕🩳",
-    img: "/summer.jpg",
+    img: "/summer-1.jpg",
     url: "/list?cat=☀%EF%B8%8Fsummer-dream💐",
     bg: "bg-gradient-to-r from-yellow-100 to-pink-100",
   },
