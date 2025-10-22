@@ -44,8 +44,8 @@ async function NavBar() {
                                 className='w-180 lg:w-250 xl:w-450'
                                 src="/oliStore.png"
                                 alt='logo'
-                                width={180}
-                                height={50}
+                                width={250}
+                                height={100}
                             />
                         </div>
                     </Link>
