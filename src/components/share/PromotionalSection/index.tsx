@@ -19,7 +19,7 @@ function PromotionalSection() {
           </button> */}
       </div>
       <div className="relative w-1/3">
-        <Image src="/happy_boy.png" alt="" fill className="object-contain" />
+        <Image src="/blipi-2.png" alt="" fill className="object-contain" />
       </div>
     </div>
   )

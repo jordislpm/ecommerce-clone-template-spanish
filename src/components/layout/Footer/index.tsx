@@ -47,9 +47,9 @@ function Footer() {
             <h1 className="font-medium text-lg">TIENDA</h1>
             <div className="flex flex-col gap-6">
               <Link className='hover-underline-secundary' href="/list?cat=all-products&sort=asc+lastUpdated">Últimas novedades</Link>
-              <Link className='hover-underline-secundary' href="/list?cat=accessories">Accesorios</Link>
-              <Link className='hover-underline-secundary' href="/list?cat=pants-jeans">Pantalones</Link>
-              <Link className='hover-underline-secundary' href="/list?cat=t-shirts">Camisetas</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=🩰accesorios👒">Accesorios</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=pantalones">Pantalones</Link>
+              <Link className='hover-underline-secundary' href="/list?cat=polos-y-camisetas">Polos y Camisetas</Link>
               <Link className='hover-underline-secundary' href="/list?cat=all-products">Todos los productos</Link>
             </div>
           </div>

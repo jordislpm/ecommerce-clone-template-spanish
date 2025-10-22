@@ -37,15 +37,16 @@ async function NavBar() {
             {/* Pantallas grandes */}
             <div className='hidden md:flex items-center justify-center gap-8 h-full w-full'>
                 {/* Izquierda */}
-                <div className='w-1/3 xl:w-1/2 flex items-center gap-12'>
+                <div className='w-1/3 xl:w-1/2 flex items-center gap-3'>
                     <Link href="/">
-                        <div className='text-2xl tracking-wide'>
+                        <div className="flex items-center">
                             <Image
-                                className='w-180 lg:w-250 xl:w-450'
                                 src="/oliStore.png"
-                                alt='logo'
-                                width={250}
-                                height={100}
+                                alt="logo"
+                                width={180}
+                                height={80}
+                                className="object-contain"
+                                priority
                             />
                         </div>
                     </Link>
