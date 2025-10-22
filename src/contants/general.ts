@@ -140,10 +140,10 @@ customerService: {
 export const slidesData: SlideType[] = [
   {
     id: 1,
-    title: "Diversión de verano para niños",
-    description: "¡Ropa fresca con hasta 50% de descuento! ☀️👕🩳",
-    img: "/summer.jpg",
-    url: "/list?cat=☀%EF%B8%8Fsummer-dream💐",
+    title: "Calidez y confort para esta navidad",
+    description: "¡Abrígate! Ahorra hasta 50% en estilos de invierno ❄️🧤🧣",
+    img: "/christmas-oli.jpg",
+    url: "/list?cat=🎄dulce-navidad-🎄",
     bg: "bg-gradient-to-r from-yellow-100 to-pink-100",
   },
   {
